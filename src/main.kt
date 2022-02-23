@@ -51,6 +51,5 @@ fun main (args: Array<String>) {
             }
         }
     } while (userMenuOption != 7)
-
 }
 

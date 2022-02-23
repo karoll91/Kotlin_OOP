@@ -388,9 +388,9 @@ class Report() {
     private var marks: Int = 5
     private var average: Int = 0
     private var border = Border()
-    val userMarks =IntArray(marks)
+    val userMarks = IntArray(marks)
 
-    private fun getAvg():Int {
+    private fun getAvg(): Int {
         average = userMarks.average().toInt()
         return average
     }
@@ -401,9 +401,9 @@ class Report() {
         if (userAdno in 1000..9999) {
             this.adno = userAdno
         } else {
-            border.printBorder()
+            border.printBorderError()
             println("Invalid code. You must enter 4 digit numbers!")
-            border.printBorder()
+            border.printBorderError()
         }
 
         print("Enter name (Not to exceed 20 characters): ")
@@ -411,9 +411,9 @@ class Report() {
         if (name!!.length < 20) {
             this.name = userName
         } else {
-            border.printBorder()
+            border.printBorderError()
             println("User name should not exceed the 20 characters ")
-            border.printBorder()
+            border.printBorderError()
         }
 
 
@@ -432,13 +432,15 @@ class Report() {
 
     fun disPlayInfo() {
         border.printBorder()
-        println("""
+        println(
+            """
             Admisson number:    = $adno
             Name:               = $name
             Marks obtained:     = $marks
-            Average marks       = ${getAvg()}
-            
-        """.trimIndent())
+            --------------------------
+            Average marks       = ${getAvg()}            
+        """.trimIndent()
+        )
         border.printBorder()
     }
 }
