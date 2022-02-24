@@ -14,7 +14,7 @@ Note : You are also required to give detailed function definitions.
  */
 class Book() {
     private var bookNo: Int? = null
-    private var bookTitle: String = ""
+    private var bookTitle: String? = null
     private var price: Float? = null
     private var border = Border()
 
@@ -34,7 +34,7 @@ class Book() {
             if (this.bookTitle == ""){
                 print("Enter Book Number (Not to exceed 20 characters): ")
                 val userBookTitle = readLine()!!.toString()
-                if (bookTitle.length < 20) {
+                if (bookTitle!!.length < 20) {
                     this.bookTitle = userBookTitle
                 } else {
                     border.printBorderError()
