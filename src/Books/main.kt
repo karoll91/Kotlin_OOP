@@ -1,6 +1,8 @@
 package Books
 
 fun main() {
-    val lion = Lion()
-    lion.eat()
+    val hippo = Hippo()
+    println(hippo.foot)
+    println(hippo.image)
+    println(hippo.habitat)
 }

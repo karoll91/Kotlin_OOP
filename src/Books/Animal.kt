@@ -1,39 +1,58 @@
 package Books
 
 open class Animal {
-    var image = ""
-    var foot = ""
-    var habitat = ""
-    var hunger = 0
+    open val image = ""
+    open val foot = ""
+    open val habitat = ""
+    open val hunger = 0
 
-    fun makeNoise(){
-        println("What sound does this animal make?")
+    open fun makeNoise() {
+        println("The animal is making a noise")
     }
-    fun eat(){
-        println("What did this animal eat?")
+
+    open fun eat() {
+        println("The animal is eating")
     }
-    fun roam(){
-        println("What the animal does when it’s not eating or sleeping.")
+
+    open fun roam() {
+        println("The animal is roaming")
     }
-    fun sleep(){
-        println("Makes the animal take a nap")
+
+    fun sleep() {
+        println("The animal is sleeping")
     }
 }
-class Lion():Animal(){
+
+open class Feline() : Animal() {
+    var roam = roam()
+}
+
+open class Canine() : Animal() {
+    var roam = roam()
+}
+
+class Lion() : Feline() {
 
 }
-class Hippo():Animal(){
+
+class Hippo() : Animal() {
+    override var image = "hippo.jpg"
+    override var foot: String = "grass"
+    override var habitat: String = "Watter"
+}
+
+class Lynx() : Feline() {
 
 }
-class Lynx():Animal(){
+
+class Fox() : Canine() {
 
 }
-class Fox():Animal(){
+
+class Wolf() : Canine() {
 
 }
-class Wolf():Animal(){
 
-}
-class Cheetah:Animal(){
+class Cheetah : Feline() {
 
 }
