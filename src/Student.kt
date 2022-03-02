@@ -11,6 +11,18 @@ Public member function of class student
 Takedata()                   Function to accept values for admno, sname, eng, science and invoke ctotal() to calculate total.
 Showdata()                   Function to display all the data members on the screen.
  */
+fun checkCharacterIf(){
+//    val scanner = Scanner(System.in)
+    print("Enter character: ")
+    val text: String = readLine()!!.toString()
+    if (text in "a".."z" || text in "A".."Z")
+        println("$text this alphabet")
+    else if (text in "0".."9")
+        println("$text this number")
+    else
+        println("$text this Special Character")
+}
+
 class Student() {
     private var id: Int = 0
     private var sname: String = ""

@@ -64,7 +64,7 @@ class Batsman() {
             }
             this.barAvg
 
-            displaydata()
+
         } catch (e: Exception) {
             if (e is NumberFormatException) {
                 println("Please provide correct input! ")

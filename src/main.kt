@@ -21,6 +21,7 @@ fun main(args: Array<String>) {
             2 -> {
                 val taskTwo = Batsman()
                 taskTwo.readData()
+                taskTwo.displaydata()
             }
             3 -> {
                 val taskThree = Test()
@@ -38,11 +39,14 @@ fun main(args: Array<String>) {
                 val taskSex = Report()
                 taskSex.readInfo()
             }
+            7 -> {
+                checkCharacterIf()
+            }
             else -> {
                 println("Wrong Input, please select between 1 to 7!")
             }
         }
-    } while (userMenuOption != 7)
+    } while (userMenuOption != 8)
 
 }
 
